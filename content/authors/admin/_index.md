@@ -1,6 +1,7 @@
 ---
 # Display name
 title: Киселева Елизавета
+avatar: avatar.jpg
 
 # Full name (for SEO)
 first_name: Елизавета
