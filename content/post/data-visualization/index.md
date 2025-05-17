@@ -1,157 +1,49 @@
 ---
-title: 📈 Communicate your results effectively with the best data visualizations
-summary: Use popular tools such as Plotly, Mermaid, and data frames.
-date: 2023-10-25
+title: Правильное питание и спорт в условиях учебы
+summary: Как сохранить здоровье и энергию, сочетая учебу, физическую активность и питание
+date: 2025-05-17
 authors:
-  - admin
+  - Т. Бондарь
 tags:
-  - Hugo
-  - Hugo Blox
-  - Markdown
+  - здоровье
+  - университет
+  - питание
+  - спорт
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
+  filename: "images/health-student.jpg"
+  caption: 'Изображение: [Unsplash](https://unsplash.com)'
+  preview_only: true
 ---
 
-Hugo Blox is designed to give technical content creators a seamless experience. You can focus on the content and Hugo Blox handles the rest.
+{{< toc mobile_only=true is_open=true >}}
 
-Use popular tools such as Plotly, Mermaid, and data frames.
+## Зачем следить за здоровьем в университете?
 
-## Charts
+Период обучения в университете — это время интенсивной умственной и физической нагрузки. Регулярные пары, лабораторные, бессонные ночи перед дедлайнами — всё это оказывает влияние на организм. Чтобы сохранить энергию и продуктивность, важно правильно питаться и поддерживать физическую активность.
 
-Hugo Blox supports the popular [Plotly](https://plot.ly/) format for interactive data visualizations. With Plotly, you can design almost any kind of visualization you can imagine!
+## Основы здорового питания для студентов
 
-Save your Plotly JSON in your page folder, for example `line-chart.json`, and then add the `{{</* chart data="line-chart" */>}}` shortcode where you would like the chart to appear.
+Правильное питание не требует сложных диет или дорогих продуктов. Главное — соблюдать баланс и регулярность:
 
-Demo:
+- **Завтрак обязателен.** Он запускает обмен веществ и повышает концентрацию.
+- **Перекусы — только полезные.** Орехи, фрукты, йогурт вместо снеков и фастфуда.
+- **Вода.** Минимум 1.5–2 литра в день для поддержки мозга и тела.
+- **Обеды и ужины — сбалансированные.** Белки, сложные углеводы, овощи.
 
-{{< chart data="line-chart" >}}
+## Спорт и движение
 
-You might also find the [Plotly JSON Editor](http://plotly-json-editor.getforge.io/) useful.
+Даже минимальная активность положительно сказывается на здоровье:
 
-## Diagrams
+- Утренняя зарядка (10–15 минут) улучшает кровообращение и внимание.
+- Прогулки между парами — это тоже движение.
+- Фитнес, йога, танцы, спортивные секции — можно подобрать по интересам.
 
-Hugo Blox supports the _Mermaid_ Markdown extension for diagrams.
+## Как всё совместить?
 
-An example **flowchart**:
+- **Планирование.** Внести в расписание время для питания и спорта, как для пары.
+- **Поддержка.** Заниматься с друзьями веселее и мотивирует.
+- **Реализм.** Лучше 3 тренировки по 15 минут в неделю, чем один марафон и выгорание.
 
-    ```mermaid
-    graph TD
-    A[Hard] -->|Text| B(Round)
-    B --> C{Decision}
-    C -->|One| D[Result 1]
-    C -->|Two| E[Result 2]
-    ```
+## Вывод
 
-renders as
-
-```mermaid
-graph TD
-A[Hard] -->|Text| B(Round)
-B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-An example **sequence diagram**:
-
-    ```mermaid
-    sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    loop Healthcheck
-        John->>John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts!
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
-    ```
-
-renders as
-
-```mermaid
-sequenceDiagram
-Alice->>John: Hello John, how are you?
-loop Healthcheck
-    John->>John: Fight against hypochondria
-end
-Note right of John: Rational thoughts!
-John-->>Alice: Great!
-John->>Bob: How about you?
-Bob-->>John: Jolly good!
-```
-
-An example **class diagram**:
-
-    ```mermaid
-    classDiagram
-    Class01 <|-- AveryLongClass : Cool
-    Class03 *-- Class04
-    Class05 o-- Class06
-    Class07 .. Class08
-    Class09 --> C2 : Where am i?
-    Class09 --* C3
-    Class09 --|> Class07
-    Class07 : equals()
-    Class07 : Object[] elementData
-    Class01 : size()
-    Class01 : int chimp
-    Class01 : int gorilla
-    Class08 <--> C2: Cool label
-    ```
-
-renders as
-
-```mermaid
-classDiagram
-Class01 <|-- AveryLongClass : Cool
-Class03 *-- Class04
-Class05 o-- Class06
-Class07 .. Class08
-Class09 --> C2 : Where am i?
-Class09 --* C3
-Class09 --|> Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-Class08 <--> C2: Cool label
-```
-
-An example **state diagram**:
-
-    ```mermaid
-    stateDiagram
-    [*] --> Still
-    Still --> [*]
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
-    ```
-
-renders as
-
-```mermaid
-stateDiagram
-[*] --> Still
-Still --> [*]
-Still --> Moving
-Moving --> Still
-Moving --> Crash
-Crash --> [*]
-```
-
-## Data Frames
-
-Save your spreadsheet as a CSV file in your page's folder and then render it by adding the _Table_ shortcode to your page:
-
-```go
-{{</* table path="results.csv" header="true" caption="Table 1: My results" */>}}
-```
-
-renders as
-
-{{< table path="results.csv" header="true" caption="Table 1: My results" >}}
-
-## Did you find this page helpful? Consider sharing it 🙌
+Правильное питание и умеренная физическая активность — не обуза, а вложение в твою успешную учебу и здоровье. Заботься о себе — и учеба станет легче, а настроение стабильнее!
